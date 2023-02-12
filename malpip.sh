@@ -28,6 +28,7 @@ create() {
     inject $PROJ_NAME $FILE
     cd $PROJ_NAME
     python setup.py sdist --formats=gztar
+    twine upload dist/* --verbose
     echo -e "\n[+] Done"
   else
     echo -e "Directory already exists."
