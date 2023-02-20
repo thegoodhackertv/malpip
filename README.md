@@ -1,6 +1,6 @@
 
 # malpip
-Create a malicious pip package that runs your command when installing it.
+Create a malicious pip package that runs your command during installation.
 
 ## Prerequisite
 Create an account on https://pypi.org
