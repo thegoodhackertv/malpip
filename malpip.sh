@@ -1,6 +1,4 @@
 #!/bin/bash
-# run as sudo
-
 
 # Functions
 
