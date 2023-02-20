@@ -50,7 +50,7 @@ usage(){
   echo -e "  create\tCreate package structure and inject code from FILE"
   echo -e "  usage\t\tDisplay this usage message\n"
   echo -e "Examples:"
-  echo -e "  $0 create valid-project-name /path/to/command\n"
+  echo -e "  $0 create valid-project-name command.txt\n"
 }
 
 # Main
