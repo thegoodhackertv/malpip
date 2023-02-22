@@ -1,6 +1,6 @@
 
 # malpip
-Create a malicious pip package that runs your command during installation.
+Tool that creates a malicious pip package that runs your command during installation.
 
 ## Prerequisite
 Create an account on https://pypi.org
@@ -26,4 +26,13 @@ You will be asked for your pypi credentials to upload the project.
 ./malpip create nothingmalicious command.txt
 ```
 5. Install the package on the victim machine and your command will be executed.
+```bash
+pip install nothingmalicious
+```
 
+## Useful Resources
+- [Youtube video](https://youtu.be/ux32ZHUJbKk) (spanish)
+- [Website post](https://thegoodhackertv.com/ciberseguridad/te-pueden-infectar-con-github-y-python/) (spanish)
+
+## Disclaimer
+Usage of these scripts for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
